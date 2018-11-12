@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="本平台可以在线接收短信，接收短信验证码，显示迅速，与国外类似短信验证码接收更快捷。在线短信接收平台,免费验证码接收平台,虚拟手机号接收短信app,哪个短信平台比较好,代收手机短信验证码,虚拟手机号码接收短信,国外短信接收平台,手机短信验证码,手机验证码平台,接码平台,短信验证码,验证码平台,云验证码平台,短信验证码是多少,手机短信验证码接收系统,验证码短信平台,虚拟手机号验证码平台,手机收不到验证码,手机验证码接收软件,免费的临时手机号软件,手机获取验证码收费吗,虚拟手机验证码生成器,免费的临时手机号软件,网站验证码短信平台,接收手机验证码平台,发短信最便宜,手机收验证码服务,网站注册手机验证码">
+    <meta name="keywords" content="在线短信接收,sms_receive,短信接收,短信验证码接收,在线短信接收平台,免费验证码接收平台,虚拟手机号接收短信app,哪个短信平台比较好,代收手机短信验证码,虚拟手机号码接收短信,国外短信接收平台,手机短信验证码,手机验证码平台,接码平台,短信验证码,验证码平台,云验证码平台,短信验证码是多少,手机短信验证码接收系统,验证码短信平台,虚拟手机号验证码平台,手机收不到验证码,手机验证码接收软件,免费的临时手机号软件,手机获取验证码收费吗,虚拟手机验证码生成器,免费的临时手机号软件,网站验证码短信平台,接收手机验证码平台,发短信最便宜,手机收验证码服务,网站注册手机验证码">
+    <title>云短信 - 免费在线短信接收</title>  <link rel="stylesheet" media="all" href="/assets/web-0989a4f7b183b6088baf7e4d8aec77edc155f55d37b9708cffde897d365220f0.css" />
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<div class="container-fluid">
+  <header class="col-xs-12 text-center infoheader">
+    <h2>在线短信验证码接收，已接收:<?php echo $c;?>条短信</h2>
+    <p>下面的电话号码只用于注册一些网站，防止被骚扰，他人可以通过此电话号码找回密码，所以注册时应注意个人信息，由此造成经济损失概不负责</p>
+  </header>
+  <section class="col-xs-12 newsletters">
+    <div class="row" id="box">
+
+
+
+    </div>
+  </section>
+</div>
+<script>
+$.ajax({
+	url: "http://sms.059844.com/list.php?action=list",
+	type: "GET",
+	dataType: "jsonp",
+	success: function (data) {
+		for(var i in data){
+			var html = '<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 continfobox"><div class="infobox text-center"><div class="flip-container "><div class="flipper"><div class="front"><figure class="col-lg-5 col-md-5 col-sm-12 col-xs-12 img-circle"><img alt="The latest deals, news, and firms in venture capital" src="https://www.ifreesite.com/world/image/'+data[i].city+'_flag.png"></figure><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info"><h3><a href="/view.html?phone='+data[i].phone+'">+'+data[i].phone+'</a></h3><p>最近收取短信：'+data[i].lasttime+'</p><p>在使用前你应该知晓此电话号码短信内容所有人都可以查看</p><div class="tags"><b>'+data[i].zh_name+'</b></div></div><div class="list-subscription-action"><a data-remote="true" data-disable-with="Opening ..." class="col-xs-12 btn btn-default btn-susbcr" href="/view.html?phone='+data[i].phone+'"><i class="fa fa-envelope ico ico-env"></i> 阅读短信 <img class="ico ico-arrow" src="/assets/web/ico-arrow-gray-ccce20fba87a4b789849696785ba3840e240aaf30233bba4668f82b3309787ae.png" alt="Ico arrow gray"></a>          </div></div></div></div></div></div>';
+			$("#box").append(html);
+		}
+    }
+});
+</script>
+<div style="display:none;">
+  <script src="https://s19.cnzz.com/z_stat.php?id=1275148854&web_id=1275148854" language="JavaScript"></script>
+  </div>
+</body>
+</html>
