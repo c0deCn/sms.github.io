@@ -1,0 +1,79 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>免费在线短信验证码接收</title>
+  <meta name="description" content="本平台可以在线接收短信，接收短信验证码，显示迅速，与国外类似短信验证码接收更快捷。在线短信接收平台,免费验证码接收平台,虚拟手机号接收短信app,哪个短信平台比较好,代收手机短信验证码,虚拟手机号码接收短信,国外短信接收平台,手机短信验证码,手机验证码平台,接码平台,短信验证码,验证码平台,云验证码平台,短信验证码是多少,手机短信验证码接收系统,验证码短信平台,虚拟手机号验证码平台,手机收不到验证码,手机验证码接收软件,免费的临时手机号软件,手机获取验证码收费吗,虚拟手机验证码生成器,免费的临时手机号软件,网站验证码短信平台,接收手机验证码平台,发短信最便宜,手机收验证码服务,网站注册手机验证码">
+    <meta name="keywords" content="在线短信接收,sms_receive,短信接收,短信验证码接收,在线短信接收平台,免费验证码接收平台,虚拟手机号接收短信app,哪个短信平台比较好,代收手机短信验证码,虚拟手机号码接收短信,国外短信接收平台,手机短信验证码,手机验证码平台,接码平台,短信验证码,验证码平台,云验证码平台,短信验证码是多少,手机短信验证码接收系统,验证码短信平台,虚拟手机号验证码平台,手机收不到验证码,手机验证码接收软件,免费的临时手机号软件,手机获取验证码收费吗,虚拟手机验证码生成器,免费的临时手机号软件,网站验证码短信平台,接收手机验证码平台,发短信最便宜,手机收验证码服务,网站注册手机验证码">
+  <link rel="stylesheet" media="all" href="assets/web-0989a4f7b183b6088baf7e4d8aec77edc155f55d37b9708cffde897d365220f0.css" />
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    .list{
+        margin-top: 140px;
+    }
+    .listBox{
+        background: #fff;
+        font-size: 0;
+        padding:10px 20px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .listBox p{
+        font-size: 18px;
+    }
+    .listBox span{
+        width:50%;
+        display: inline-block;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+<div class="container-fluid">
+  <header class="col-xs-12 text-center infoheader">
+    <h2>+<span class="phone_number"></span>在线短信验证码接收</h2>
+    <p>请不要用+<span class="phone_number"></span>这个电话号码接收重要内容,由此造成经济损失概不负责 <span style="color:red;">默认显示最新100条</span></p>
+  </header>
+    <div class="list" id="box">
+    </div>
+</div>
+<script>
+var $_GET = (function(){
+    var url = window.document.location.href.toString();
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+document.title = $_GET['phone']+'免费在线短信验证码接收';
+$(".phone_number").html($_GET['phone']);
+$.ajax({
+	url: "https://sms.059844.com/list.php?action=list_phone&phone="+$_GET['phone'],
+	type: "GET",
+	dataType: "jsonp",
+	success: function (data) {
+		for(var i in data){
+			var html = '<div class="listBox">'+
+                    '            <p class="text-primary">'+data[i].text+'</p>'+
+                    '            <span class="text-muted">'+ data[i].form_phone +'</span>'+
+                    '            <span class="text-muted text-right">'+ data[i].time +'</span>'+
+                    '        </div>';
+			$("#box").append(html);
+		}	
+    }
+});
+</script>
+<div style="display:none;">
+  <script src="https://s19.cnzz.com/z_stat.php?id=1275148854&web_id=1275148854" language="JavaScript"></script>
+  </div>
+
+</body>
+</html>
