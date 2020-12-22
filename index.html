@@ -7,8 +7,10 @@
     <meta name="description" content="本平台可以在线接收短信，接收短信验证码，显示迅速，与国外类似短信验证码接收更快捷。在线短信接收平台,免费验证码接收平台,虚拟手机号接收短信app,哪个短信平台比较好,代收手机短信验证码,虚拟手机号码接收短信,国外短信接收平台,手机短信验证码,手机验证码平台,接码平台,短信验证码,验证码平台,云验证码平台,短信验证码是多少,手机短信验证码接收系统,验证码短信平台,虚拟手机号验证码平台,手机收不到验证码,手机验证码接收软件,免费的临时手机号软件,手机获取验证码收费吗,虚拟手机验证码生成器,免费的临时手机号软件,网站验证码短信平台,接收手机验证码平台,发短信最便宜,手机收验证码服务,网站注册手机验证码">
     <meta name="keywords" content="在线短信接收,sms_receive,短信接收,短信验证码接收,在线短信接收平台,免费验证码接收平台,虚拟手机号接收短信app,哪个短信平台比较好,代收手机短信验证码,虚拟手机号码接收短信,国外短信接收平台,手机短信验证码,手机验证码平台,接码平台,短信验证码,验证码平台,云验证码平台,短信验证码是多少,手机短信验证码接收系统,验证码短信平台,虚拟手机号验证码平台,手机收不到验证码,手机验证码接收软件,免费的临时手机号软件,手机获取验证码收费吗,虚拟手机验证码生成器,免费的临时手机号软件,网站验证码短信平台,接收手机验证码平台,发短信最便宜,手机收验证码服务,网站注册手机验证码">
     <title>云短信 - 免费在线短信接收</title>  <link rel="stylesheet" media="all" href="/assets/web-0989a4f7b183b6088baf7e4d8aec77edc155f55d37b9708cffde897d365220f0.css" />
-	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-	<script data-ad-client="ca-pub-3591530059965636" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!--script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script-->
+	<script src='/alert/jquery-1.9.0.min.js'></script>
+	<link rel="stylesheet" href="/alert/alert.css">
+	<script src='/alert/alert.js'></script>
 </head>
 <body>
 
@@ -26,7 +28,34 @@
     </div>
   </section>
 </div>
+<div style="display:none">
+<div id="fieldset" style="text-align: center;margin: 0 auto" >
+由于本站无广告收入以及各种收入，需要扫码关注才能继续查看隐藏接收短信内容，望大家谅解!
+<br/>功能介绍:免费领取外卖红包，对于经常<span style="color:red">吃外卖(干饭人)</span>的人真的很实用!
+<br/>
+<img src="/wx.jpg" >
+</div>
+</div>
+
 <script>
+var M = {
+
+	}
+
+		M.dialog6 = jqueryAlert({
+			'style'   : 'pc',
+			'title'   : '在线接收短信关注小程序',
+			'content' :  $("#fieldset"),
+			'modal'   : true,
+			'contentTextAlign' : 'left',
+			'width'   : 'auto',
+			'animateType' : 'linear',
+			'buttons' :{
+				'关闭' : function(){
+					M.dialog6.close();
+				},
+			}
+		})
 	/*
 $.ajax({
 	url: "https://sms.059844.com/list.php?action=list",
